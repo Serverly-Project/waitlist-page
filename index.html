@@ -102,7 +102,7 @@
             overflow: hidden;
         }
 
-        .hero::before {
+        /* .hero::before {
             content: '';
             position: absolute;
             top: 0;
@@ -110,11 +110,11 @@
             right: 0;
             bottom: 0;
             background-image: 
-                linear-gradient(30deg, transparent 40%, rgba(255,255,255,0.05) 40%, rgba(255,255,255,0.05) 60%, transparent 60%),
-                linear-gradient(-30deg, transparent 40%, rgba(255,255,255,0.03) 40%, rgba(255,255,255,0.03) 60%, transparent 60%);
+                linear-gradient(30deg, transparent 40%, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.05) 60%, transparent 60%),
+                linear-gradient(-30deg, transparent 40%, rgba(0,0,0,0.03) 40%, rgba(0,0,0,0.03) 60%, transparent 60%);
             background-size: 100px 100px, 80px 80px;
             opacity: 0.5;
-        }
+        } */
 
         /* Geometric decorations */
         .hero::after {
@@ -122,7 +122,7 @@
             position: absolute;
             width: 200px;
             height: 200px;
-            border: 2px solid rgba(255,255,255,0.1);
+            border: 2px solid rgba(0,0,0,0.1);
             border-radius: 12px;
             top: 10%;
             left: 10%;
@@ -132,7 +132,7 @@
 
         .geometric-element {
             position: absolute;
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(0,0,0,0.08);
             z-index: 1;
         }
 
@@ -189,8 +189,8 @@
 
         .cta-button {
             display: inline-block;
-            background: #fff;
-            color: #000;
+            background: #000;
+            color: #fff;
             padding: 14px 32px;
             font-size: 1rem;
             font-weight: 500;
@@ -203,7 +203,7 @@
         }
 
         .cta-button:hover {
-            background: #f3f4f6;
+            background: #3c3c3c;
             transform: translateY(-1px);
         }
 
@@ -218,7 +218,7 @@
 
         .feature-card {
             background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(0, 0, 0, 0.15);
             border-radius: 12px;
             padding: 32px 24px;
             text-align: left;
@@ -227,7 +227,7 @@
         }
 
         .feature-card:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(220, 220, 220, 0.15);
             transform: translateY(-2px);
         }
 
@@ -261,44 +261,12 @@
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 12px;
-            color: #fff;
+            color: #000;
         }
 
         .feature-card p {
             opacity: 0.8;
             line-height: 1.6;
-        }
-
-        /* Dashboard Section */
-        .dashboard-section {
-            padding: 80px 0;
-            background: var(--secondary-bg);
-            transition: background 0.3s ease;
-        }
-
-        .dashboard-container {
-            text-align: center;
-        }
-
-        .dashboard-mockup {
-            max-width: 100%;
-            border-radius: 12px;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .mockup-placeholder {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 500;
         }
 
         /* Modal */
@@ -408,12 +376,29 @@
             opacity: 0.9;
         }
 
+        /* Success Message */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background: #d1fae5;
+            border: 1px solid #a7f3d0;
+            border-radius: 8px;
+            color: #065f46;
+            margin-top: 20px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
         /* Footer */
         footer {
-            background: var(--accent-color);
-            color: var(--bg-color);
+            /* background: var(--accent-color); */
+            /* color: var(--bg-color); */
+            border: 1px solid var(--border-color);
             text-align: center;
-            padding: 40px 0;
+            /* padding: 40px 0; */
             transition: all 0.3s ease;
         }
 
@@ -430,8 +415,8 @@
         }
 
         .footer-social .social-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            /* background: rgba(255, 255, 255, 0.1); */
+            border: 1px solid rgba(0, 0, 0, 0.2);
             color: var(--bg-color);
         }
 
@@ -443,22 +428,6 @@
             margin: 0;
             opacity: 0.8;
             font-size: 0.9rem;
-        }
-
-        /* Success Message */
-        .success-message {
-            display: none;
-            text-align: center;
-            padding: 20px;
-            background: #d1fae5;
-            border: 1px solid #a7f3d0;
-            border-radius: 8px;
-            color: #065f46;
-            margin-top: 20px;
-        }
-
-        .success-message.show {
-            display: block;
         }
 
         /* Social Section */
@@ -486,6 +455,14 @@
             color: var(--hero-text);
             transition: all 0.3s ease;
             font-size: 16px;
+        }
+
+        .social-btn img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
         }
 
         .social-btn:hover {
@@ -535,9 +512,9 @@
                 <img src="public/logo.svg" alt="Serverly Logo" class="logo" style="height: 40px; margin-left: 20px;">
             </div>
         </div>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <!-- <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
             <span id="theme-text">Dark</span>
-        </button>
+        </button> -->
     </header>
 
     <!-- Hero Section -->
@@ -548,7 +525,7 @@
         
         <div class="container">
             <div class="hero-content">
-                <h1>Welcome to Serverly</h1>
+                <h1>All your Assests in One Place</h1>
                 <p class="subtitle">Monitor all your assets across cloud and on-premise infrastructure. Track performance, uptime, and get instant alerts when your systems go down.</p>
                 
                 <button class="cta-button" onclick="openModal()">Join the waitlist</button>
@@ -570,26 +547,34 @@
                         <p>Launch instant notifications and manage server health with comprehensive monitoring tools.</p>
                     </div>
                 </div>
-
-                <div class="social-section">
-                    <div class="social-links">
-                        <a href="https://twitter.com/yourcompany" class="social-btn" aria-label="Follow us on Twitter">
-                            <span>𝕏</span>
-                        </a>
-                        <a href="https://linkedin.com/company/yourcompany" class="social-btn" aria-label="Follow us on LinkedIn">
-                            <span>💼</span>
-                        </a>
-                        <a href="https://github.com/yourcompany" class="social-btn" aria-label="Follow us on GitHub">
-                            <span>🐙</span>
-                        </a>
-                        <a href="https://discord.gg/yourserver" class="social-btn" aria-label="Join our Discord">
-                            <span>💬</span>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
+
+    <!-- <footer>
+        <div class="container">
+            <div class="copy">
+                <p>&copy; 2025 Serverly. All rights reserved.</p>
+                <p>Built for teams who can't afford downtime.</p>
+            </div>
+            <div class="social-section">
+                <div class="social-links">
+                    <a href="https://x.com/serverly" class="social-btn" aria-label="Follow us on Twitter">
+                        <span>𝕏</span>
+                    </a>
+                    <a href="https://linkedin.com/in/serverly" class="social-btn" aria-label="Follow us on LinkedIn">
+                        <img src="public/icons/linkedin.png" alt="">
+                    </a>
+                    <a href="https://instagram.com/serverly" class="social-btn" aria-label="Follow us on Instagram">
+                        <img src="public/icons/ig.png" alt="">
+                    </a>
+                    <a href="https://tiktok.com/@serverly" class="social-btn" aria-label="Follow us on TikTok">
+                        <img src="public/icons/tiktok.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
 
     <!-- Waitlist Modal -->
     <div id="waitlistModal" class="modal">
@@ -634,16 +619,6 @@
             </form>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Serverly. All rights reserved.</p>
-                <p>Built for teams who can't afford downtime.</p>
-            </div>
-        </div>
-    </footer>
 
     <script>
         // Theme management
