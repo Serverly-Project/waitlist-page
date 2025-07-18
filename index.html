@@ -1066,12 +1066,12 @@
           console.log("Error sending welcome email: ", error);
         }
 
-        // setTimeout(() => {
-        //   closeModal();
-        //   setTimeout(() => {
-        //     location.reload();
-        //   }, 500);
-        // }, 3000);
+        setTimeout(() => {
+          closeModal();
+          setTimeout(() => {
+            location.reload();
+          }, 500);
+        }, 3000);
       }
 
       document.addEventListener("DOMContentLoaded", function () {
